@@ -1,0 +1,37 @@
+.student-each{
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    border-bottom:1px solid black; 
+}
+
+.student-each:nth-child(2n+1){
+    background: #f0f0f0;
+}
+
+.student-each:nth-child(2n){
+    background: #f7f7f7;
+}
+
+.student-icon{
+    left:-15px;
+    width:32px;
+    height:32px;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+}
+
+.student-info{
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+.student-name{
+    font-size: 120%;
+}
+
+.student-id{
+    font-size: 80%;
+}
