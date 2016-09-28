@@ -1,0 +1,31 @@
+.module-name{
+    padding:3px 10px;
+    border-top:2px solid rgba(0,0,0,0.2);
+    border-bottom:2px solid rgba(0,0,0,0.2);
+    font-size: 130%;
+    background: rgba(153,204,255,0.1);
+}
+
+.learning-unit-each>div{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+.learning-unit-each:last-child>div{
+    border-bottom:0px;
+}
+
+.learning-unit-name{
+    padding:3px 10px;
+    font-size: 100%;
+    display: inline-block;
+}
+.learning-unit-duration{
+    display: inline-block;
+    color: rgba(0,204,255,1);
+}
+.learning-unit-each>div[visited=true]{
+    background: rgba(0,200,102,0.1);
+}
+.learning-unit-each>div{
+    background: rgba(99,33,00,0.1);
+}

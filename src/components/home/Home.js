@@ -14,7 +14,6 @@ function Home(dom){
     this.dom = $(html);
 
     dom.append(this.dom);
-    this.dom.css('display','none');
 
     new LoginPanel($('#login-panel'));
 }

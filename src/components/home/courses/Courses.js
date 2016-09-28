@@ -41,7 +41,10 @@ Courses.prototype.fill = function(courses){
 
         $(courseDom).click(function(){
             if(!svcs.courseService.getCourse(course.id)){
-                svcs.courseService.setCourse(course);
+                svcs.courseService.updateCourse({
+                    id:course.id,
+                    snapshot:course
+                });
             };
             Router.navigate(`/course/${course.id}`,course);
         });

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 var courseService = {
-    setCourse: function (course) {
+    updateCourse: function (course) {
         if (!this.courses[course.id]) {
             this.courses[course.id] = {};
         }

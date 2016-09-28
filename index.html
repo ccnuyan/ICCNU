@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href="//cdn.bootcss.com/pure/0.6.0/pure-min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/headjs/1.0.3/head.js"></script>
+    <script src="//echarts.baidu.com/build/dist/echarts.js"></script>
 </head>
 
 <body>
@@ -30,6 +31,29 @@
     <div id="header"></div>
     <div id="content"></div>
     <div id="footer"></div>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        window.updateChart = function(option){
+            require([
+                'echarts',
+                'echarts/chart/line', 
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('week-chart')); 
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            });
+        };
+    </script>
     <script type="text/javascript">
         document.currentScript.src = '';
         head.load(__CSS, function() {
