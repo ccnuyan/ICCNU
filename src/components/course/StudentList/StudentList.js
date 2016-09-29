@@ -23,13 +23,27 @@ StudentList.prototype.update = function (courseid) {
         shtml = shtml.replace('__USERNAME', stu.name);
         shtml = shtml.replace('__REALNAME', stu.id);
         shtml = shtml.replace('__CLASS', (stu.classcode ? ('[' + stu.classcode + ']') : ''));
-        shtml = shtml.replace('__TOTAL', (course.overview.Users[stu.id]?toReadable(course.overview.Users[stu.id]) : ''));
+        shtml = shtml.replace('__TOTAL', (course.overview.Users[stu.id] ? toReadable(course.overview.Users[stu.id]) : ''));
 
         var dom = $(shtml);
 
         dom.click(function () {
             Router.navigate(`/course/${courseid}/${stu.id}`);
             $('#user-detail').get(0).scrollIntoView();
+
+            var userid = svcs.authTokenService.getUser().UserName;
+            var options = {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    Source: userid,
+                    Target: stu.id,
+                    CourseId: courseid
+                })
+            };
+            fetch(hosts.hit + `/hit`, options);
         });
 
         $('#student_ul').append(dom);

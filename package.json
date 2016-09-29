@@ -6,6 +6,8 @@
   "scripts": {
     "itaobao": "npm install --registry=https://registry.npm.taobao.org",
     "wp-dev": "rm -r build; mkdir -p build; node --harmony ./webpack.js --dev",
+    "wp-build": "rm -r build; mkdir -p build; node --harmony ./webpack.js --build --prod",
+    "start-web-prod": "cd web/server; node --harmony ./server.js --prod",
     "start-web-dev": "node --harmony ./server.js --dev"
   },
   "author": "",

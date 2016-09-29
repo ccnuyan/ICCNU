@@ -77,6 +77,8 @@ var excludeFromStats = [
     /node_modules[\\\/]react(-router)?[\\\/]/,
 ];
 
+var plugins = [];
+
 if (options.minimize) {
     plugins.push(
         new webpack.optimize.UglifyJsPlugin({
@@ -93,8 +95,6 @@ if (options.minimize) {
         new webpack.NoErrorsPlugin()
     );
 }
-
-var plugins = [];
 
 if (options.hot) {
     //for node.js mode, same as --hot --inline of CLI mode
