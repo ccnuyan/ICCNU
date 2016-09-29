@@ -13,7 +13,7 @@ var renderer = new Renderer();
 
 if (argv.prod) {
     //prod server: server the compiled js files
-    app.use('/static', express.static(path.join(__dirname, 'prod')));
+    app.use('/static', express.static(path.join(__dirname, 'static')));
 }
 
 app.get('/*', function (req, res, next) {
