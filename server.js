@@ -1,12 +1,20 @@
 var express = require('express');
 var http = require('http');
+var path = require('path');
+var app = express();
+var argv = require('yargs').argv;
+
+var config = require('./config.js')
 var Renderer = require('./renderer.js');
 
-var renderer = new Renderer();
-var port = 8000;
-
-var app = express();
 var server = http.createServer(app);
+
+var renderer = new Renderer();
+
+if (argv.prod) {
+    //prod server: server the compiled js files
+    app.use('/static', express.static(path.join(__dirname, 'prod')));
+}
 
 app.get('/*', function (req, res, next) {
     renderer.render(function (err, html) {
@@ -21,6 +29,6 @@ app.get('/*', function (req, res, next) {
     });
 });
 
-server.listen(port, function () {
-    console.log('Express server listening on port ' + port);
+server.listen(config.port, function () {
+    console.log('Express server listening on config.port ' + config.port);
 });

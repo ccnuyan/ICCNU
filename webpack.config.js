@@ -21,14 +21,13 @@ var alias = {};
 console.log(`the __dirname is ${__dirname}`);
 console.log(`the root is ${root}`);
 
-var publicPath = options.devServer ? 'http://localhost:' + options.devPort + '/_assets/' : '/_assets/';
+var publicPath = options.devServer ? 'http://localhost:' + options.devPort + '/_assets/' : '/static/';
 
 /* app list */
 var entry = {
     //rawjs
     main: './src/main.js',
     router: './src/Router.js',
-    
 };
 
 /* all loaders but stylesheets */
@@ -66,7 +65,7 @@ Object.keys(stylesheetLoaders).forEach(function (ext) {
 
 /* webpack output */
 var output = {
-    path: path.join(__dirname, 'build', 'public'),
+    path: path.join(__dirname, 'static'),
     publicPath: publicPath,
     filename: '[name].js' + (options.longTermCaching ? '?[chunkhash]' : ''),
     chunkFilename: (options.devServer ? '[id].js' : '[name].js') + (options.longTermCaching ? '?[chunkhash]' : ''),

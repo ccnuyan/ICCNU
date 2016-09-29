@@ -6,7 +6,8 @@ if (argv.dev) {
     module.exports = {
         title: 'DEV',
         maxDelay: 100,
-        port: 8080,
+        //front end server port - dev
+        port: 10000,
         dev: true,
         webpack: {
             statsOutput: path.join(__dirname, `${statsOutput}dev.stats.json`),
@@ -17,6 +18,7 @@ if (argv.dev) {
                 minimize: false,
                 hot: true,
                 longTermCaching: false,
+                //wp-port
                 devPort: 8080,
                 copy: false,
             }
@@ -26,7 +28,8 @@ if (argv.dev) {
     module.exports = {
         title: 'ICCNU',
         maxDelay: 0,
-        port: 8080,
+        //front end server port - pord
+        port: 8000,
         dev: false,
         webpack: {
             statsOutput: path.join(__dirname, `${statsOutput}build.stats.json`),
