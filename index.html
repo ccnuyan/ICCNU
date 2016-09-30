@@ -21,7 +21,6 @@
 
 <body>
     <script>
-        if(document.currentScript)document.currentScript.src = '';
         var __API_BASE = '__API_BASE__';
         var __HOST = '__HOST__';
         var __ASSETS = '__ASSETS__';
@@ -55,7 +54,7 @@
         };
     </script>
     <script type="text/javascript">
-        document.currentScript.src = '';
+        if(document.currentScript)document.currentScript.src = '';
         head.load(__CSS, function() {
             console.log('css loaded');
             head.load(__JS, function() {
