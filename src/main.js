@@ -8,6 +8,8 @@ import FriendPage from './components/friend/FriendPage.js';
 import authTokenService from './services/authTokenService.js';
 import courseService from './services/courseService.js';
 
+require('es6-promise').polyfill();
+
 (function () {
     window.TERM_CODE = '201602';
 
