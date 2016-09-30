@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  background-color: #555;
+  color: #fff;
+  padding: 8px;
+  height:70px;
+  width: 100%;  
+  z-index: 255;
+}
+#content{
+    padding-top:70px;
+}
+.header a {
+  color: inherit;
+}
+.logo {
+  display: block;
+  font-size: 200%;
+  margin-bottom: -10px;
+}
+.nav li{
+    display: inline-block;
+    vertical-align: top;
+}
+.nav li a {
+  padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+.nav{
+  margin: 0px;
+}
+.logo-block{
+  display: none;
+}
+.logo-block {
+  float: left;
+}
+.nav-block{
+  float: left;
+}
+@media only screen and (min-width: 700px) {
+  .logo-block{
+    display: block;
+  }
+  .nav-block {
+    float: right;
+  }
+  .nav-block{
+    display: block;
+  }
+}

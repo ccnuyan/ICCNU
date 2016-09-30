@@ -1,0 +1,42 @@
+.course-each{
+    cursor: pointer;
+    padding:15px 15px;
+    height:150px;
+}
+.course-each>*{
+    display: inline-block;
+}
+.course-each>.img-container{
+    position: relative;
+    font-size:200%;
+    color:#777;
+    width: 120px;
+    height: 120px;
+    margin:0;
+    border:2px solid #777;
+}
+.course-each img{
+    width: 120px;
+    height: 120px;
+    margin:0;
+}
+.course-each:hover{
+    background: #aaaaaa;
+}
+.each-course-name{
+    font-size: 180%;
+}
+.course-each>label{
+    display: inline-block;
+}
+.course-each:nth-child(2n+1){
+    background: rgba(153,102,102,0.1);;
+}
+.course-each:nth-child(2n){
+    background: rgba(153,153,202,0.1);
+}
+.each-course-info{
+    vertical-align: top;
+    margin-left:30px;
+}
+

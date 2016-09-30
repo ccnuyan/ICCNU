@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ol, ul  {
   padding-left:20px;
+  //http://www.w3school.com.cn/tiy/t.asp?f=csse_list-style-position
   list-style-position: inside;
 }
 
@@ -120,6 +121,7 @@ textarea {
 }
 
 table {
+  //http://www.w3school.com.cn/cssref/pr_tab_border-collapse.asp
   border-collapse: collapse;
 }
 
@@ -339,51 +341,9 @@ th {
   max-width: 600px;
 }
 .main{
-  min-width: 600px;
+  min-width: 320px;
+  overflow-x: auto;
 }
-
-/*-------------------------------------*/
-/* LAYOUT: HEADER */
-
-.header {
-  background-color: #555;
-  color: #fff;
-  padding: 16px;
-  height:80px;
-  width: 100%;  
-}
-
-.header a {
-  color: inherit;
-}
-
-/* Header: Logo */
-
-.logo {
-  display: block;
-}
-
-/* Header: Navigation */
-
-.nav li a {
-  padding: 10px;
-}
-
-@media only screen and (min-width: 700px) {
-  .logo-block {
-    float: left;
-  }
-
-  .nav-block {
-    float: right;
-  }
-
-  .nav li, .nav li a {
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 
 /*-------------------------------------*/
 /* LAYOUT: FOOTER */

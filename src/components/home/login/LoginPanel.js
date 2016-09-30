@@ -1,6 +1,6 @@
 import formhtml from './LoginForm.html';
 import userhtml from './LoginUser.html';
-import './Style.scss';
+import './Login.scss';
 
 function LoginPanel(dom) {
     this.dom = dom;

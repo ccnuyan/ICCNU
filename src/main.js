@@ -15,8 +15,10 @@ import courseService from './services/courseService.js';
     window.hosts.ykt_auth = 'http://moocoauth.starc.com.cn:8080/oauth/token';
     window.hosts.ykt = 'http://moocoauth.starc.com.cn:8080/ykt';
     window.hosts.stats = 'http://moocoauth.starc.com.cn:8080/stats';
+    // window.hosts.stats = 'http://localhost:3000';
     window.hosts.hit = 'http://moocoauth.starc.com.cn:8080/network';
     // window.hosts.hit = 'http://localhost:4000';
+    window.hosts.file = 'http://202.114.33.120:8066/MoocFileService/DownloadFile/'
     
 
     window.svcs = {

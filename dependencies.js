@@ -1,5 +1,5 @@
 var stats = require('./stats.js');
-module.exports = {
+var dependencies = {
     css: [
         '//cdn.bootcss.com/normalize/3.0.3/normalize.min.css',
         '//cdn.bootcss.com/pure/0.6.0/pure-min.css',
@@ -10,7 +10,10 @@ module.exports = {
         '//cdn.bootcss.com/fetch/1.0.0/fetch.min.js',
         '//cdn.bootcss.com/classlist/2014.01.31/classList.min.js',
         '//cdn.bootcss.com/jquery/1.9.1/jquery.min.js',
-        `${stats.publicPath}router.js`,
-        `${stats.publicPath}main.js`
+        `${stats.publicPath}${stats.assetsByChunkName.router}`,
+        `${stats.publicPath}${stats.assetsByChunkName.main}`
     ],
-};
+}
+
+console.log(JSON.stringify(dependencies,null,2));
+module.exports = dependencies;

@@ -1,4 +1,5 @@
 import html from './Header.html';
+import './Header.css';
 
 function Header(dom){
     dom.replaceWith(html);

@@ -1,5 +1,6 @@
 import html from './WeekChart.html';
 import toReadable from '../../../services/readableInterval.js';
+import './WeekChart.scss'
 
 var WeekChart = function (dom) {
     this.dom = $(html);
