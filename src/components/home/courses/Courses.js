@@ -66,7 +66,7 @@ Courses.prototype.fill = function (courses) {
                 body: JSON.stringify({
                     Source: userid,
                     Target: userid,
-                    CourseId: courseid
+                    CourseId: course.id
                 })
             };
             fetch(hosts.hit + `/hit`, options);
